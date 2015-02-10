@@ -1,4 +1,4 @@
-module RB
+module Risebox
   module Client
     class AppError < StandardError; end
     class TimeoutError < StandardError; end

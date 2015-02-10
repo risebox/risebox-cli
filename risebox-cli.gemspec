@@ -1,10 +1,10 @@
 lib = File.expand_path('../lib', __FILE__)
 $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
-require 'rb/client/version'
+require 'risebox/client/version'
 
 Gem::Specification.new do |s|
   s.name = "risebox-cli"
-  s.version = RB::Client::VERSION
+  s.version = Risebox::Client::VERSION
   s.authors = ["Adrien THERY", "Nicolas NARDONE"]
   s.email = 'hello@risebox.co'
   s.summary = "Ruby client wrapper for Risebox HTTP API"

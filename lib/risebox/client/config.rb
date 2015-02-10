@@ -1,4 +1,4 @@
-module RB
+module Risebox
   module Client
     class << self
       attr_accessor :configuration

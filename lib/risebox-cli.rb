@@ -1,6 +1,6 @@
-require 'rb/client/config'
-require 'rb/client/errors'
-require 'rb/client/connection'
-require 'rb/client/session'
+require 'risebox/client/config'
+require 'risebox/client/errors'
+require 'risebox/client/connection'
+require 'risebox/client/session'
 
-RB::Client.configure
+Risebox::Client.configure
