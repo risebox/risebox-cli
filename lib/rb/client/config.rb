@@ -1,4 +1,4 @@
-module Risebox::Client
+module RB::Client
   class << self
     attr_accessor :configuration
   end

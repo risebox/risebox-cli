@@ -1,6 +1,6 @@
 require 'faraday'
 
-module Risebox::Client::Connection
+module RB::Client::Connection
 
   def get_connection args
     Faraday.new(args)
@@ -28,17 +28,17 @@ module Risebox::Client::Connection
     begin
       result = http_call(verb, conn, url, form_params)
     rescue Faraday::Error::TimeoutError
-      raise Risebox::Client::TimeoutError, 'Risebox Client Timeout'
+      raise RB::Client::TimeoutError, 'RB Client Timeout'
     end
     case result.status
     when 200
       sym_keys(JSON.parse(result.body))
     when 403
-      raise Risebox::Client::ForbiddenError, 'Risebox Client Bad credentials'
+      raise RB::Client::ForbiddenError, 'RB Client Bad credentials'
     when 404
-      raise Risebox::Client::NotFoundError, 'Risebox Client Ressource not found'
+      raise RB::Client::NotFoundError, 'RB Client Ressource not found'
     when 500
-      raise Risebox::Client::AppError, 'Risebox Client Application error'
+      raise RB::Client::AppError, 'RB Client Application error'
     end
   end
 

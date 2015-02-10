@@ -1,4 +1,4 @@
-module Risebox
+module RB
   module Client
     VERSION = '0.0.1'
   end

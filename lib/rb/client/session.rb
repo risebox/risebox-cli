@@ -1,6 +1,6 @@
-class Risebox::Client::Session
+class RB::Client::Session
 
-  include Risebox::Client::Connection
+  include RB::Client::Connection
 
   attr_reader :key, :secret, :locale
 
@@ -30,7 +30,7 @@ private
   end
 
   def api_call verb, url, form_params, options
-    conn   = get_connection(url: Risebox::Client.configuration.api_url)
+    conn   = get_connection(url: RB::Client.configuration.api_url)
 
     context = (options[:context].join(',') if options[:context].respond_to?(:join))
     (conn.params['context'] = context         ) if context
