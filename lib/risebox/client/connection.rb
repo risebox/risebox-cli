@@ -36,7 +36,7 @@ module Risebox
         when 200
           sym_keys(JSON.parse(result.body))
         when 403
-          raise Risebox::Client::FoRiseboxiddenError, 'Risebox Client Bad credentials'
+          raise Risebox::Client::ForbiddenError, 'Risebox Client Bad credentials'
         when 404
           raise Risebox::Client::NotFoundError, 'Risebox Client Ressource not found'
         when 500

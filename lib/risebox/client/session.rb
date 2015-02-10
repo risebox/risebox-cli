@@ -14,11 +14,11 @@ module Risebox
       end
 
       def metric_measures metric, options={}
-        api_get "/api/device/#{key}/metrics/#{metric}/measures", options
+        api_get "/api/devices/#{key}/metrics/#{metric}/measures", options
       end
 
       def send_measure metric, value, options={}
-        api_post "/api/device/#{key}/metrics/#{metric}/measures", {value: value}, options
+        api_post "/api/devices/#{key}/metrics/#{metric}/measures", {value: value}, options
       end
 
     private
