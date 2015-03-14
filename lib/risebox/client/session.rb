@@ -13,6 +13,10 @@ module Risebox
         @raise  = raise_errors
       end
 
+      def metrics options={}
+        api_get "/api/devices/#{key}/metrics", options
+      end
+
       def metric_measures metric, options={}
         api_get "/api/devices/#{key}/metrics/#{metric}/measures", options
       end
@@ -20,6 +24,7 @@ module Risebox
       def send_measure metric, value, options={}
         api_post "/api/devices/#{key}/metrics/#{metric}/measures", {value: value}, options
       end
+
 
     private
 
