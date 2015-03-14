@@ -13,7 +13,7 @@ module Risebox
       attr_accessor :api_url
 
       def initialize
-        @api_url = 'https://risebox-api.herokuapp.com'
+        @api_url = 'https://rbdev-api.herokuapp.com'
       end
     end
   end
