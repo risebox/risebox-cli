@@ -25,6 +25,10 @@ module Risebox
         api_post "/api/devices/#{key}/metrics/#{metric}/measures", {value: value}, options
       end
 
+      def send_alert metric, value, description, options={}
+        api_post "/api/devices/#{key}/metrics/#{metric}/alerts", {value: value, description: description}, options
+      end
+
 
     private
 
